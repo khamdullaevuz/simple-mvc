@@ -2,17 +2,10 @@
 
 namespace framework\router\console;
 
+use framework\traits\RouterTrait;
+
 class Router
 {
+    use RouterTrait;
     private static array $routes = [];
-
-    public static function add($request, $method): void
-    {
-        self::$routes[$request] = $method;
-    }
-
-    public static function routes(): array
-    {
-        return self::$routes;
-    }
 }

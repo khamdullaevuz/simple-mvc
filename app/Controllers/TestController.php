@@ -2,14 +2,15 @@
 
 namespace App\Controllers;
 
-use Framework\Controller;
-use Framework\Request;
+use framework\Controller;
+use framework\Request;
 
 class TestController extends Controller
 {
     public function test(Request $request): void
     {
         $data = $request->all();
+
         dd($data, "test");
     }
 

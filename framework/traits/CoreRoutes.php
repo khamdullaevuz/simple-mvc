@@ -7,7 +7,7 @@ use framework\router\console\Router as ConsoleRouter;
 
 trait CoreRoutes
 {
-    public function loadCoreRoutes()
+    public function loadCoreRoutes(): void
     {
         ConsoleRouter::add('serve', [ConsoleHandler::class, 'handle']);
     }
