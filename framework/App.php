@@ -34,7 +34,7 @@ final class App
     public function handle($args = []): void
     {
         $method = $args[1];
-        CoreRoutes::load();
+        $this->loadCoreRoutes();
         $routes = ConsoleRouter::routes();
         if(array_key_exists($method, $routes))
         {
