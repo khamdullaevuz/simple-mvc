@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Exceptions;
+namespace framework\exceptions;
 
 use Exception;
 use Throwable;
 
-class MethodNotFoundException extends Exception
+class CommandNotFoundException extends Exception
 {
     public function __construct(string $message = "Method not found", int $code = 404, ?Throwable $previous = null)
     {

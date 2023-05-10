@@ -2,8 +2,8 @@
 
 require __DIR__ . '/../loader.php';
 
-use App\Exceptions\HttpNotFoundException;
 use Framework\App;
+use framework\exceptions\HttpNotFoundException;
 
 try {
     $app = new App();

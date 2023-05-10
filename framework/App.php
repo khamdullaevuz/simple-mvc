@@ -2,10 +2,10 @@
 
 namespace framework;
 
-use App\Exceptions\HttpNotFoundException;
-use App\Exceptions\MethodNotFoundException;
-use framework\router\web\Router as WebRouter;
+use framework\exceptions\HttpNotFoundException;
+use framework\exceptions\CommandNotFoundException;
 use framework\router\console\Router as ConsoleRouter;
+use framework\router\web\Router as WebRouter;
 use framework\traits\CoreRoutes;
 
 final class App
@@ -29,7 +29,7 @@ final class App
     }
 
     /**
-     * @throws MethodNotFoundException
+     * @throws CommandNotFoundException
      */
     public function handle($args = []): void
     {
@@ -44,7 +44,7 @@ final class App
             $args = array_slice($args, 2);
             (new $controller())->$method($args);
         }else{
-            throw new MethodNotFoundException();
+            throw new CommandNotFoundException();
         }
     }
 }
