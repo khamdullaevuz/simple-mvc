@@ -6,11 +6,10 @@ use framework\exceptions\HttpNotFoundException;
 use framework\exceptions\CommandNotFoundException;
 use framework\router\console\Router as ConsoleRouter;
 use framework\router\web\Router as WebRouter;
-use framework\traits\CoreRoutes;
 
 final class App
 {
-    use CoreRoutes;
+    use traits\CoreRoutes;
     /**
      * @throws HttpNotFoundException
      */
