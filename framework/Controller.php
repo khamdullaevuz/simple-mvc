@@ -2,7 +2,7 @@
 
 namespace Framework;
 
-class Controller
+abstract class Controller
 {
     public function view($name, $args = []): void
     {

@@ -4,7 +4,7 @@ namespace Framework;
 
 use App\Exceptions\HttpNotFoundException;
 
-class App
+final class App
 {
     /**
      * @throws HttpNotFoundException
