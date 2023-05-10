@@ -2,7 +2,7 @@
 
 require __DIR__ . '/../loader.php';
 
-use Exceptions\HttpNotFoundException;
+use app\Exceptions\HttpNotFoundException;
 use Framework\App;
 
 try {

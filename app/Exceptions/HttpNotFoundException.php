@@ -1,9 +1,10 @@
 <?php
 
-namespace Exceptions;
+namespace app\Exceptions;
 
 use Exception;
 use Throwable;
+
 class HttpNotFoundException extends Exception
 {
     public function __construct(string $message = "Page not found", int $code = 404, ?Throwable $previous = null)
