@@ -2,12 +2,12 @@
 
 require __DIR__ . '/../loader.php';
 
-use app\Exceptions\HttpNotFoundException;
+use App\Exceptions\HttpNotFoundException;
 use Framework\App;
 
 try {
     $app = new App();
     $app->run();
 } catch (HttpNotFoundException|Exception|Throwable $e) {
-    abort($e);
+    abort($e->getCode(), $e->getMessage());
 }

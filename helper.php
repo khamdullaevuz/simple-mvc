@@ -1,9 +1,9 @@
 <?php
 
-function abort(Exception $e): void
+function abort($code = 500, $message = "Internal server error"): void
 {
-    http_response_code($e->getCode());
-    view('error', ['message' => $e->getMessage()]);
+    http_response_code($code);
+    view('error', compact('message'));
 }
 
 function view($name, $args = []): void
@@ -15,5 +15,6 @@ function view($name, $args = []): void
 function dd(...$data): void
 {
     var_dump(...$data);
+    http_response_code(500);
     die(500);
 }
