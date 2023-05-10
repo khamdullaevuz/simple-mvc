@@ -6,7 +6,7 @@ class Router
 {
     private static array $routes = [];
 
-    public static function get($request, $method): void
+    public static function add($request, $method): void
     {
         self::$routes[$request] = $method;
     }

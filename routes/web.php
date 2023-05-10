@@ -4,5 +4,5 @@ use Framework\Router;
 use Controllers\TestController;
 use Controllers\HomeController;
 
-Router::get('', [HomeController::class, 'index']);
-Router::get('test', [TestController::class, 'test']);
+Router::add('', [HomeController::class, 'index']);
+Router::add('test', [TestController::class, 'test']);
