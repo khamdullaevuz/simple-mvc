@@ -12,4 +12,8 @@ try {
     http_response_code($e->getCode());
     $message = $e->getMessage();
     view('error', compact('message'));
+} catch (Exception $e) {
+    http_response_code(500);
+    $message = $e->getMessage();
+    view('error', compact('message'));
 }
