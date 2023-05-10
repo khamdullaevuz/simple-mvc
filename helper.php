@@ -14,7 +14,7 @@ function view($name, $args = []): void
 
 function dd(...$data): void
 {
-    var_dump(...$data);
     http_response_code(500);
+    var_dump(...$data);
     die(500);
 }
