@@ -41,8 +41,7 @@ final class App
             $route = $routes[$method];
             $controller = $route[0];
             $method = $route[1];
-            array_shift($args);
-            array_shift($args);
+            $args = array_slice($args, 2);
             (new $controller())->$method($args);
         }else{
             throw new MethodNotFoundException();
