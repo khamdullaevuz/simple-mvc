@@ -8,6 +8,6 @@ use Framework\App;
 try {
     $app = new App();
     $app->run();
-} catch (HttpNotFoundException|Exception|Throwable $e) {
+} catch (HttpNotFoundException|Exception|Error|Throwable $e) {
     abort($e->getCode(), $e->getMessage());
 }
