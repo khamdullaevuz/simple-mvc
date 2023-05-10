@@ -11,5 +11,5 @@ try {
 } catch (HttpNotFoundException $e) {
     http_response_code($e->getCode());
     $message = $e->getMessage();
-    require __DIR__.'/../views/error.view.php';
+    view('error', compact('message'));
 }
