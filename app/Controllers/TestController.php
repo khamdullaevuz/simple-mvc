@@ -12,4 +12,9 @@ class TestController extends Controller
         $data = $request->all();
         dd($data, "test");
     }
+
+    public function console($args): void
+    {
+        dd($args);
+    }
 }

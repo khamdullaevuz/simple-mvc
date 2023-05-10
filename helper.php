@@ -18,3 +18,9 @@ function dd(...$data): void
     var_dump(...$data);
     die(500);
 }
+
+function get_args(): array
+{
+    global $argv;
+    return $argv;
+}

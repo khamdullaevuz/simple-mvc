@@ -1,0 +1,16 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/loader.php';
+
+use App\Exceptions\MethodNotFoundException;
+use Framework\App;
+
+$args = get_args();
+
+try {
+    $app = new App();
+    $app->handle($args);
+} catch (MethodNotFoundException $e) {
+    abort($e->getCode(), $e->getMessage());
+}
