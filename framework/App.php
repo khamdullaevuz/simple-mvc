@@ -4,7 +4,6 @@ namespace framework;
 
 use App\Exceptions\HttpNotFoundException;
 use App\Exceptions\MethodNotFoundException;
-use framework\handlers\ConsoleHandler;
 use framework\router\web\Router as WebRouter;
 use framework\router\console\Router as ConsoleRouter;
 use framework\traits\CoreRoutes;

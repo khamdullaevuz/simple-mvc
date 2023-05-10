@@ -2,8 +2,6 @@
 
 namespace framework\router\console;
 
-use framework\handlers\ConsoleHandler;
-
 class Router
 {
     private static array $routes = [];
