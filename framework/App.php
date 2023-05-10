@@ -2,7 +2,7 @@
 
 namespace Framework;
 
-use exceptions\HttpNotFoundException;
+use Exceptions\HttpNotFoundException;
 
 class App
 {
