@@ -5,15 +5,9 @@ require __DIR__ . '/../loader.php';
 use Exceptions\HttpNotFoundException;
 use Framework\App;
 
-$app = new App();
 try {
+    $app = new App();
     $app->run();
-} catch (HttpNotFoundException $e) {
-    http_response_code($e->getCode());
-    $message = $e->getMessage();
-    view('error', compact('message'));
-} catch (Exception $e) {
-    http_response_code(500);
-    $message = $e->getMessage();
-    view('error', compact('message'));
+} catch (HttpNotFoundException|Exception|Throwable $e) {
+    abort($e);
 }
