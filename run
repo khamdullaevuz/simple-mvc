@@ -3,7 +3,7 @@
 
 require_once __DIR__ . '/loader.php';
 
-use Framework\App;
+use framework\App;
 use framework\exceptions\CommandNotFoundException;
 
 $args = get_args();
@@ -12,5 +12,5 @@ try {
     $app = new App();
     $app->handle($args);
 } catch (CommandNotFoundException $e) {
-    abort($e->getCode(), $e->getMessage());
+    echo abort($e->getCode(), $e->getMessage());
 }

@@ -6,8 +6,9 @@ use framework\Controller;
 
 class HomeController extends Controller
 {
-    public function index(): void
+    public function index(): string
     {
-        view('home');
+        $message = "Salom dunyo";
+        return view('home', compact('message'));
     }
 }
