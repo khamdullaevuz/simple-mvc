@@ -15,7 +15,7 @@ function view($name, $args = []): string
         'console' => __DIR__ . '/views/'
     };
 
-    $view = file_get_contents( $dir . $name . '.view.php');
+    $view = file_get_contents($dir . $name . '.view.php');
 
     foreach($args as $key => $value)
     $view = preg_replace("/{{\s" . $key . "\s}}/m", $value, $view);
