@@ -1,4 +1,4 @@
-# Simple-mvc
+# simple-mvc
 
 ## Run
 ```shell
